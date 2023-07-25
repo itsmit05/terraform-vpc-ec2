@@ -24,5 +24,5 @@ module "ec2_instances" {
   private_subnet_id = module.networking.private_subnets_id[0]
   num_public_instances  = 1
   num_private_instances = 2
-  
+  key_pair_name         = "terraformec2" # Enter the .pem key
 }
