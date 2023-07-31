@@ -14,8 +14,12 @@ variable "instance_type" {
   description = "The instance type for both EC2 instances."
 }
 
-variable "public_subnet_id" {
-  description = "The ID of the public subnet where the public EC2 instance will be launched."
+variable "public_subnet_id_1" {
+  description = "The ID of the first public subnet."
+}
+
+variable "public_subnet_id_2" {
+  description = "The ID of the second public subnet."
 }
 
 variable "private_subnet_id" {
@@ -31,3 +35,7 @@ variable "num_private_instances" {
   description = "The number of private EC2 instances to create."
 }
 
+# Add the key_pair_name variable here if it is missing
+variable "key_pair_name" {
+  description = "The name of the key pair for SSH access."
+}

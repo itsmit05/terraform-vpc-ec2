@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_instance" "public_instance" {
   ami           = var.public_ami
   instance_type = var.instance_type
-  subnet_id     = var.public_subnet_id
+  subnet_id     = var.public_subnet_id_1
   count = var.num_public_instances
   key_name      = var.key_pair_name
   # Other configuration for the public instance, if needed
